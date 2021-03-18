@@ -1,0 +1,1 @@
+{"ast":null,"code":"const dev = false;\nexport const server = dev ? \"http://localhost:3000\" : \"https://test.com\";","map":null,"metadata":{},"sourceType":"module"}

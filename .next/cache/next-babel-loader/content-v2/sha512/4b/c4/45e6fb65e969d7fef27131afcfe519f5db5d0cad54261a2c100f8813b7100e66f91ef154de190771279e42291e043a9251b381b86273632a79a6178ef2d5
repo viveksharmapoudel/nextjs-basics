@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { articles } from \"../../../data\";\nexport default function handler(req, res) {\n  res.status(200).json(articles);\n}","map":null,"metadata":{},"sourceType":"module"}

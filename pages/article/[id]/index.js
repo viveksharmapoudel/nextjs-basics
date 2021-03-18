@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { server } from "../../../config";
+// import axios from "../../../utils/axios"
+// import requests from "../../../utils/requests" 
 const article = ({ article }) => {
   // const router = useRouter();
   // const { id } = router.query;
@@ -28,6 +30,8 @@ export const getStaticProps = async (context) => {
 };
 
 export const getStaticPaths = async () => {
+
+  // const res = await axios.get(requests.allArticles);
   const res = await fetch(`${server}/api/articles`);
   const articles = await res.json();
 
