@@ -1,13 +1,13 @@
 .grid {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 100%;
+  justify-content: center;
   margin-top: 3rem;
 }
 
 .card {
+  max-width: 300px;
   margin: 1rem;
   flex-basis: 45%;
   padding: 1.5rem;
@@ -19,22 +19,21 @@
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
+.card:hover {
   color: #0070f3;
   border-color: #0070f3;
+  cursor: pointer;
 }
 
 .card h3 {
   margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .card p {
   margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.25;
 }
 
 .logo {

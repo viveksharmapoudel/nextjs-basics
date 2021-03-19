@@ -8,7 +8,6 @@ import requests from "../utils/requests"
 export default function Home({ articles }) {
   return (
     <div>
-      <h1>This is our home page!</h1>
       <ArticleList articles={articles} />
     </div>
   );
@@ -17,12 +16,33 @@ export default function Home({ articles }) {
 //this one is mainly for staticSite generation in which all the possible links are generated in the beginning
 export const getStaticProps = async () => {
   
-  // const res = await axios.get(requests.allArticles);
-  const res = await fetch(` ${server}/api/articles`);
+  // // const res = await axios.get(requests.allArticles);
+  // const res = await fetch(` ${server}/api/articles`);
+  // const articles = await res.json();
+  // return {
+  //   props: {
+  //     articles,
+  //   },
+  // };
+  
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/posts`
+  );
   const articles = await res.json();
   return {
-    props: {
-      articles,
-    },
+    props: { articles },
   };
+  
 };
+
+
+// export const getServerSideProps = async () => {
+//   const res = await fetch(
+//     `https://jsonplaceholder.typicode.com/posts`
+//   );
+//   const articles = await res.json();
+//   return {
+//     props: { articles },
+//   };
+// };
+
